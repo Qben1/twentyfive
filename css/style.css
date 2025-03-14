@@ -1,8 +1,59 @@
 body{
-    margin: 0px;
-
+    margin: auto;
 }
 
 @media screen and (max-width: 500px) {
+    #layout1 {
+        display: grid;
+        height: 200vh;
+        grid-template-rows: 5% 60% auto;
+        grid-template-areas:
+        'hd'
+        'dv'
+        'ft'
+        ;
+    }
     
+}
+
+header#hd{
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-area: hd;
+    justify-content: baseline;
+    position: sticky;
+    top: 0;
+}
+
+#nav{
+    display: grid;
+}
+
+div {
+    grid-area: dv;
+}
+
+footer {
+    grid-area: ft;
+}
+
+#bil_bild{
+    max-width: 500px;
+}
+
+.menu {
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.show {
+    left: 0;
+}
+
+.menu-button {
+    cursor: pointer;
+    display: inline;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -8,15 +9,24 @@
 </head>
 <body>
   <main>
-    <section>
-      <header>
-        <nav>
-
+    <section id="layout1">
+      <header id="hd">
+        <nav id="nav" class="menu">
+          <div class="menu-button">
+            <span class="material-symbols-outlined">
+              menu
+            </span>
+          </div>
         </nav>
+
+        <div class="fade-layer"></div>
+
+        <h1>Bilhemsida</h1>
       </header>
       <div>
-        <img src="/img/testbild.jpg" alt="testbild">
-        bilhemsida
+        
+        <h2>bilnamn</h2>
+        <img id="bil_bild" src="img/testbild.jpg" alt="luffare">
       </div>
       <div>
 
@@ -26,5 +36,6 @@
       </footer>
     </section>
   </main>
+  <script src="js/javascript.js"></script>
 </body>
 </html>
