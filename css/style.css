@@ -1,4 +1,4 @@
-body{
+body {
     margin: auto;
 }
 
@@ -6,27 +6,30 @@ body{
     #layout1 {
         display: grid;
         height: 200vh;
-        grid-template-rows: 5% 60% auto;
+        grid-template-rows: 3% 60% auto;
         grid-template-areas:
-        'hd'
-        'dv'
-        'ft'
-        ;
+            'hd'
+            'dv'
+            'ft';
     }
-    
+    #layout2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+        justify-content: center;
+    }
 }
 
-header#hd{
-    display: grid;
-    grid-template-columns: 20% auto;
+header#hd {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
     grid-area: hd;
-    justify-content: baseline;
     position: sticky;
     top: 0;
-}
-
-#nav{
-    display: grid;
+    height: 4.5vh;
+    font-size: 19px;
 }
 
 div {
@@ -37,16 +40,22 @@ footer {
     grid-area: ft;
 }
 
-#bil_bild{
+#bil_bild {
     max-width: 500px;
+    width: 100%;
+    display: block;
 }
 
 .menu {
     height: 100vh;
-    width: 50vw;
+    width: 30vw;
     position: fixed;
     top: 0;
-    z-index: 10;
+    left: -90vw;
+    z-index: 15;
+    background-color: #cb1517;
+    transition: left 0.2s;
+    color: white;
 }
 
 .show {
@@ -54,6 +63,60 @@ footer {
 }
 
 .menu-button {
+    align-self: flex-start;
+    position: absolute;
     cursor: pointer;
-    display: inline;
+    transform: translateY(-50%);
+    margin-top: 48px;
+    margin-left: 16px;
+    left: 0;
+}
+
+.menu-button span{
+    font-size: 48px !important;
+}
+
+.fade-layer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.fade-layer.visible {
+    display: block;
+}
+
+.bild_ram {
+    position: relative;
+    display: inline-block;
+}
+
+.centrerad_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 7;
+}
+
+.headertext {
+    font-size: large;
+    text-align: center;
+}
+
+#layout2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
